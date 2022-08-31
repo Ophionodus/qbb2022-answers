@@ -2,7 +2,7 @@
 
 import sys
 
-#defines the file name as a function
+#defines parse_vcf as a function with a string value equal to the filename     fname is the argument.  (a piece of info being passed intio a function)       parse_vcf is a function, much like print or open.
 def parse_vcf(fname):
     #makes an empty list called vcf
     vcf = []
@@ -10,7 +10,7 @@ def parse_vcf(fname):
     info_description = {}
     #makes an empty set called info_type
     info_type = {}
-    #makes an empty set called format_description
+    #makes an empty dictionary called format_description
     format_description = {}
     #makes a eponymous dictionary of functions used to convert data to a given type
     type_map = {
@@ -96,7 +96,7 @@ def parse_vcf(fname):
                             in_string = not in_string
                         #increase the integer value of the variable i by one
                         i += 1
-                    #summons forth "ID" as one of the items in the set known as info_description. Again, a bit uncertain on this syntax.                       !
+                    #adds to the empty dictionary in such a way as to pair IDs and descriptions                   !
                     info_description[ID] = desc.strip('"')
                     #sets an item in the set info_type as the variable Type
                     info_type[ID] = Type
@@ -158,7 +158,7 @@ def parse_vcf(fname):
         print(f"There were {malformed} malformed entries", file=sys.stderr)
     #spit out the list known as vcf
     return vcf
-#prints the variable i, conditionally
+#prints vcf at the variable i, conditionally based on filename
 if __name__ == "__main__":
     fname = sys.argv[1]
     vcf = parse_vcf(fname)
