@@ -1,0 +1,6 @@
+import sys
+#imports bed parser
+import bed_parser
+bed_parser.bed_parser()
+
+python bed_parser.py hg38_gencodev41_chr21.bed
