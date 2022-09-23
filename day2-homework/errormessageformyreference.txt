@@ -1,0 +1,39 @@
+(base) [~/qbb2022-answers/day2-homework $]python classnotes83122.py 
+Traceback (most recent call last):
+
+
+
+
+  File "/Users/cmdb/qbb2022-answers/day2-homework/vcfParser.py", line 82, in parse_vcf
+    name, value = fields[start:i].split('=')
+	
+	
+	
+ValueError: too many values to unpack (expected 2)
+
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+
+
+
+  File "/Users/cmdb/qbb2022-answers/day2-homework/classnotes83122.py", line 10, in <module>
+    parse_vcf("dbSNP_snippet.vcf")
+	
+	
+	
+	
+	
+  File "/Users/cmdb/qbb2022-answers/day2-homework/vcfParser.py", line 111, in parse_vcf
+    raise RuntimeError("Malformed header")
+	
+	
+	
+	
+	
+	
+RuntimeError: Malformed header
