@@ -10,6 +10,9 @@
 #!/usr/bin/env python3
 import sys
 
+from vcfParser.py import parse_vcf
+parse_vcf()
+
 def relabeler(fname1, fname2):
     #create a dictionary of positions and IDs from the dbSNP file
     

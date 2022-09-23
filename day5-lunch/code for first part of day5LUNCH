@@ -1,0 +1,7 @@
+#               USAGE: RUN IN UNIX to sort into three columns:
+#      PROBAND ID           number of Fathers         number of Mothers
+
+grep 'father' aau1043_dnm.csv | cut -f 5 -d , | sort -n -t , -k 5 | sort -n | uniq -c > dadz.txt
+grep 'mother' aau1043_dnm.csv | cut -f 5 -d , | sort -n -t , -k 5 | sort -n | uniq -c > momz.txt
+join -1 2 -2 2 dadz.txt momz.txt > parentz.txt
+mate parentz.txt

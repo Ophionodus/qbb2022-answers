@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+import sys
+
+def comparer(fname)
+
+try:
+    fileee = open(fname)
+except:
+    print(filewontopen)
+    
+    

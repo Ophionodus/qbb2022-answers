@@ -33,6 +33,8 @@ exercise1.sh (END)
  
 #google: "Unix awk illegal field $()"
 
+#makes sense biolog
+
 
 
 #2. 
